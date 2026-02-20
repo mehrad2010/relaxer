@@ -1,0 +1,158 @@
+/* برای گرفتن فونت از گوگل  */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body{
+    background-image: url("bg.jpg");
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+
+}
+.title1{
+    width: 100%;
+    margin-top: 40px;
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.circle{
+    
+    background: conic-gradient(rgb(0, 204, 204) 0%,
+    rgb(0, 177, 201) 40%,
+    rgb(255, 255, 255) 40%,
+    rgb(255, 255, 255) 60%,
+    rgb(2, 77, 78) 60%,
+    rgb(4, 64, 92) 100%
+    );
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    color: white;
+    font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+    
+
+}
+
+.circle2{
+    background-color: rgb(14, 0, 41);
+    margin: auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 100%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: azure;
+    font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.text1{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.main{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+}
+.main2{
+    width: 320px;
+    height: 320px; 
+    margin: 0 auto;
+    display: flex;
+    margin: auto;
+}
+
+.pointer{ 
+    width: 320px;
+    height: 320px;
+    position: absolute; 
+    /* یادت باشه این انیمشن میاد تابعی که ما با تساید مشخ صکردیم
+    رو انجام میده که ما اسم شو گذاشتیم چرخش  */
+
+    /* اگر این لینر رو نزاری یه حرکت با مکث داره که اون خیلی قشتگه
+    برای لودینگ سایت حتما تست کن  */
+    animation: charkhesh 5s linear infinite; 
+
+    /* این برای اینکه مشخص کنیم همون اول انیمیشن ما
+     دیفالتش روی چه ددرجه ای باشه  */
+    transform: rotate(45deg);
+
+}
+
+@keyframes charkhesh {
+    /* یه روش این بود بیاد بگیم در صفر درصد فلان کن 
+    در 25 درصد فلان و .. 
+    اما یه روش هم همینه که از فروم تو استفاده کنیم و بگیم از این 
+    برو به اون  */
+    from{
+        transform: rotate(45deg)
+    }
+
+    to{
+         transform: rotate( 405deg) 
+    }
+    
+}
+
+
+/* این فقط  شکل کی اون دایره سفیده هست و انیمیشنش که اصل کار 
+هست در پوینتر انجام شده  */
+.maah{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    border-radius: 100%;
+
+
+}
+/* این سه تا رو جدا کردیم تا بتونیم 
+اون حالت انیمشن رو بهش بدیم  */
+.dam{
+    
+    animation: step1 5s linear infinite;
+}
+
+
+.hold{
+    
+    transform: scale(1.2);    
+}
+
+
+
+.bazdam{
+    animation: step2 5s linear infinite;
+}
+
+@keyframes step1 {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+         transform: scale(1.5); 
+    }
+}
+
+@keyframes step2{
+    from{transform: scale(1.2);
+    }
+    to{
+        transform: scale(0.7);
+    }
+
+}
